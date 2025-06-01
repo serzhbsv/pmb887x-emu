@@ -1,9 +1,12 @@
-name: CI
+name: Windows Build bin
 
 on:
   push:
     tags:
     - '*'
+
+  workflow_dispatch:
+        inputs:
 
 jobs:
   windows:
@@ -32,28 +35,10 @@ jobs:
           token: "${{ secrets.GITHUB_TOKEN }}"
           prerelease: true
           files: /tmp/pmb887x-emu-windows.zip
-
-  macos:
-    if: ${{ false }}
-    runs-on: macos-latest
-    steps:
-      - uses: actions/checkout@v3
-        with: 
-          submodules: true
-
-      - name: Installing qemu dependencies
-        run: |
-          brew install llvm libffi gettext glib pkg-config pixman ninja meson coreutils
-
-      - name: Building emulator
-        run: |
-          tools/build_osx.sh
-          tools/make_dist_osx.sh
-
-      - uses: softprops/action-gh-release@v1
+          
+         
+      - uses: actions/upload-artifact@v4
         with:
-          token: "${{ secrets.GITHUB_TOKEN }}"
-          prerelease: true
-          files: /tmp/pmb887x-emu-osx-arm.tar.gz
-      
-
+         name: Windows-build-emu
+         path: |
+                  /tmp/pmb887x-emu-windows.zip
