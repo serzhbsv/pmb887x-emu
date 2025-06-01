@@ -5,9 +5,12 @@ on:
     tags:
     - '*'
 
-  workflow_dispatch:
-        inputs:
-
+workflow_dispatch:
+       inputs:
+           androidsrc:
+            description: ''
+            default: ''
+        
 jobs:
   windows:
     runs-on: ubuntu-latest
