@@ -62,9 +62,6 @@ cd "$BUILD_DIR"
 		--disable-werror \
 		--disable-install-blobs \
 		--without-default-features \
-		--enable-avx2 \
-		--enable-avx512bw \
-		--enable-avx512f \
 		--enable-dsound \
 		--enable-iconv \
 		--enable-gettext \
