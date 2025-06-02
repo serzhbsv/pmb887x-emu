@@ -35,7 +35,7 @@ export PKG_CONFIG_LIBDIR="$LIBS_DIR/mingw64/lib/pkgconfig/:$LIBS_DIR/usr/lib/pkg
 export CFLAGS=" -I$LIBS_DIR/mingw64/include/ -I$LIBS_DIR/usr/include/ "
 export LDFLAGS=" -Wl,-L$LIBS_DIR/mingw64/lib/ -Wl,-L$LIBS_DIR/usr/lib/ "
 
-download_pkg "https://mirror.msys2.org/mingw/mingw64/mingw-w64-x86_64-glib2-2.76.4-1-any.pkg.tar.zst" "44b5793003516deec9dcbbe928f0658e03e8051272ddddabcd41aa8384250c9b"
+download_pkg "https://mirror.yandex.ru/mirrors/msys2/mingw/mingw64/mingw-w64-x86_64-glib2-2.76.4-1-any.pkg.tar.zst" "44b5793003516deec9dcbbe928f0658e03e8051272ddddabcd41aa8384250c9b"
 download_pkg "https://mirror.msys2.org/mingw/mingw64/mingw-w64-x86_64-SDL2-2.28.2-1-any.pkg.tar.zst" "1f38e0b90c303dfa735ae1631c73ea3a8f24bb75546a25c2d68c4c07a8851a16"
 download_pkg "https://mirror.msys2.org/mingw/mingw64/mingw-w64-x86_64-pcre2-10.42-1-any.pkg.tar.zst" "03633abbee1e0502c27ca02331e7544601853cb8c368af5fe7f2b5d57b6b10d1"
 download_pkg "https://mirror.msys2.org/mingw/mingw64/mingw-w64-x86_64-pixman-0.42.2-1-any.pkg.tar.zst" "d8448d55fef62494818cad70753d781942ce82f4d5c0e9e87bcfc1bebf5d0187"
